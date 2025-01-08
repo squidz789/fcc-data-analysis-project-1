@@ -1,10 +1,8 @@
 import numpy as np
 
-list_of_nums = list(input())
-if len(list_of_nums) != 9:
-    raise ValueError('List must contain nine numbers.')
-
 def calculate(list_of_nums):
+    if len(list_of_nums) != 9:
+        raise ValueError('List must contain nine numbers.')
     stats_dict = {
         'mean': [],
         'variance': [],
@@ -26,10 +24,8 @@ def calculate(list_of_nums):
         ]
 
         for i, key in enumerate(stats_dict):
-            if type(values[i]) != np.float64 and type(values[i]) != np.int32:
+            if type(values[i]) == np.ndarray:
                 values[i] = list(values[i])
             stats_dict[key].append(values[i])
     
     return stats_dict
-
-print(calculate(list_of_nums))
