@@ -1,3 +1,6 @@
+# Note that this works with the current versions of the libraries as my GitPod was not working and therefore I couldn't test with older versions
+# It still produces the data visualisations similar to the examples
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
